@@ -12,7 +12,7 @@ Dear Student,
 
 I'd like to invite you to enroll in my SAS OnDemand for Academics course: Cortex on SAS On-Demand 
 
-As a first step, please create your account for SAS OnDemand for Academics. To register, visit https://odamid.oda.sas.com  and click on Register for an account.  
+As a first step, please create your account for SAS OnDemand for Academics (I recommend that you use your University/College email!). To register, visit https://odamid.oda.sas.com  and click on Register for an account (I recommend that you use your University/College email!).  
 
 After you have successfully created your account, follow these steps: 
 
