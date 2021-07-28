@@ -35,3 +35,15 @@ I have also uploaded data for us to use in our course. You will be able to acces
 Example Libname statement -- libname cortex "~/my_shared_file_links/u39842936" access=readonly; 
 
 For more information about SAS OnDemand for Academics, including step-by-step registration instructions, visit the following site: http://support.sas.com/ondemand. 
+
+After you successfully create your account, you should be able to sign on the Control Center at https://odamid.oda.sas.com, and click “SAS Studio” to start coding.
+
+You will be provided a baseline model of SAS code to start with, you can modify the code to achieve the goal of the game – maximizing the donation amount.
+
+
+
+
+
+
+
+
