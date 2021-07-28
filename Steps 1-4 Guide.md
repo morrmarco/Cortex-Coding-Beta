@@ -2,9 +2,9 @@
 Repository for Beta Participants to use and play SAS Cortex Fundraising Game
 
 
-1) Getting on SAS On Demand for Academics,  2) Setting up a SAS Profile and 3) Enrolling --  
+1) Getting on SAS On Demand for Academics,  2) Setting up a SAS Profile, 3) Enrolling and 4) Accessing the data --  
 
-You can completed steps 1-3 as follows.  All participants will have received an email from Prof Morreale to enroll in the SAS Open Cortex Game.  Follow the directions on that email.   
+You can completed steps 1-4 as follows.  All participants will have received an email from Prof Morreale to enroll in the SAS Open Cortex Game.  Follow the directions on that email.   
 
 If you have lost or cannot find the email ..even if you checked your junk mail.  Here it is again: 
 
