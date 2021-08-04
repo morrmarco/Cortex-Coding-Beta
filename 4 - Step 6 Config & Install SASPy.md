@@ -7,3 +7,5 @@ To install the SASPy in your Python Command, you need to ensure that you meet th
 
 Please follow the steps on the Cortex Guide -- Section How to play Cortex in Python Command -- pages 8 - 13
 This is a very technical stage of the game set up so please read carfully.  
+
+Page 13 of the guide will highlight how to connect to SODA and access the data for Jupyter Hub
