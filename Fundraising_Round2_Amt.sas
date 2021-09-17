@@ -108,6 +108,6 @@ run;
 * Please dont forget to change 'u58717790' by your own user Number;
 
 proc export data=results.rd2_output_amt
-outfile="/home/u58717790/Results/Round2 Output amt.csv" dbms=csv
+outfile="/home/u58717790/Results/Round2 Output amt.xlsx" dbms=xlsx
 replace;
 run;
