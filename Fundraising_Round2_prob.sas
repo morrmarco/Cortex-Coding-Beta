@@ -107,7 +107,7 @@ run;
 * Please dont forget to change 'u58717790' by your own user Number;
 
 proc export data=results.rd2_output_prob
-outfile="/home/u58717790/Results/Round2 Output prob.csv" dbms=csv
+outfile="/home/u58717790/Results/Round2 Output prob.xlsx" dbms=xlsx
 replace;
 run;
 
