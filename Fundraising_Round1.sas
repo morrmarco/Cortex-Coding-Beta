@@ -1,3 +1,6 @@
+
+* Please dont forget to change 'u58717790' by your own user Number;
+
 libname cortex '/home/u58717790/my_shared_file_links/u39842936/Cortex Data Sets';
 libname results '/home/u58717790/Results';
 
@@ -27,6 +30,8 @@ else output results.test_rd1;
 run;
 
 
+* Please dont forget to change 'u58717790' by your own user Number;
+
 /* glm model*/
 ods graphics off;
 proc glmselect data=results.train_rd1 testdata=results.test_rd1;
@@ -38,6 +43,7 @@ run;
 
 
 
+* Please dont forget to change 'u58717790' by your own user Number;
 /* decision tree model*/
 proc arboretum data= results.train_rd1;
 target AmtThisYear / level=interval;
@@ -59,6 +65,8 @@ if not cmiss(of _numeric_);
 run;
 
 
+* Please dont forget to change 'u58717790' by your own user Number;
+
 data results.result_rd1 (keep= id p_amtthisyear);
 set results.score_rd1;
 %include '/home/u58717790/Results/regression_1.sas';
@@ -68,6 +76,8 @@ run;
 PROC SORT DATA=results.result_rd1;
     BY descending p_amtthisyear;
 RUN;
+
+* Please dont forget to change 'u58717790' by your own user Number;
 
 proc export data=results.result_rd1
 outfile="/home/u58717790/Results/Round1 Output.csv" dbms=csv
