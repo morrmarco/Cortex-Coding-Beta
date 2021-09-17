@@ -80,6 +80,6 @@ RUN;
 * Please dont forget to change 'u58717790' by your own user Number;
 
 proc export data=results.result_rd1
-outfile="/home/u58717790/Results/Round1 Output.csv" dbms=csv
+outfile="/home/u58717790/Results/Round1 Output.xlsx" dbms=xlsx
 replace;
 run;
