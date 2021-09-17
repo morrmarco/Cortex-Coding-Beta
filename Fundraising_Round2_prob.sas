@@ -1,3 +1,7 @@
+
+
+* Please dont forget to change 'u58717790' by your own user Number;
+
 libname cortex '/home/u58717790/my_shared_file_links/u39842936/Cortex Data Sets';
 libname results '/home/u58717790/Results';
 
@@ -27,6 +31,8 @@ else output results.test_rd2_prob;
 run;
 
 
+* Please dont forget to change 'u58717790' by your own user Number;
+
 /* glm model*/
 ods graphics off;
 proc glmselect data=results.train_rd2_prob testdata=results.test_rd2_prob;
@@ -35,6 +41,9 @@ title 'Regression of donation this year '
 'Predictors';
 code file='/home/u58717790/Results/regression_2_prob.sas';
 run;
+
+
+* Please dont forget to change 'u58717790' by your own user Number;
 
 /* decision tree model*/
 proc arboretum data= results.train_rd2_prob;
@@ -58,6 +67,9 @@ set contact_rd2;
 if not cmiss(of _numeric_);
 run;
 
+
+* Please dont forget to change 'u58717790' by your own user Number;
+
 data results.predcontact (keep= id p_gavethisyear rename=(p_gavethisyear=PContact));
 set results.contact_rd2;
 %include '/home/u58717790/Results/regression_2_prob.sas';
@@ -75,6 +87,9 @@ set nocontact_rd2;
 if not cmiss(of _numeric_);
 run;
 
+
+* Please dont forget to change 'u58717790' by your own user Number;
+
 data results.prednoncontact (keep= id p_gavethisyear rename=(p_gavethisyear=PNoContact));
 set results.nocontact_rd2;
 %include '/home/u58717790/Results/regression_2_prob.sas';
@@ -87,6 +102,9 @@ DATA results.rd2_output_prob;
    MERGE results.predcontact results.prednoncontact;
    BY ID;
 run; 
+
+
+* Please dont forget to change 'u58717790' by your own user Number;
 
 proc export data=results.rd2_output_prob
 outfile="/home/u58717790/Results/Round2 Output prob.csv" dbms=csv
