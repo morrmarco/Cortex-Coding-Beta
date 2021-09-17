@@ -1,3 +1,6 @@
+
+* Please dont forget to change 'u58717790' by your own user Number;
+
 libname cortex '/home/u58717790/my_shared_file_links/u39842936/Cortex Data Sets';
 libname results '/home/u58717790/Results';
 
@@ -28,6 +31,8 @@ else output results.test_rd2_amt;
 run;
 
 
+* Please dont forget to change 'u58717790' by your own user Number;
+
 /* glm model*/
 ods graphics off;
 proc glmselect data=results.train_rd2_amt testdata=results.test_rd2_amt;
@@ -36,6 +41,9 @@ title 'Regression of donation this year '
 'Predictors';
 code file='/home/u58717790/Results/regression_2_amt.sas';
 run;
+
+
+* Please dont forget to change 'u58717790' by your own user Number;
 
 /* decision tree model*/
 proc arboretum data= results.train_rd2_amt;
@@ -60,6 +68,9 @@ set contact_rd2;
 if not cmiss(of _numeric_);
 run; 
 
+
+* Please dont forget to change 'u58717790' by your own user Number;
+
 data results.amtcontact (keep= id p_amtthisyear rename=(p_amtthisyear=AmtContact));
 set results.contact_rd2;
 %include '/home/u58717790/Results/regression_2_amt.sas';
@@ -76,12 +87,13 @@ set nocontact_rd2;
 if not cmiss(of _numeric_);
 run;
 
+
+* Please dont forget to change 'u58717790' by your own user Number;
+
 data results.amtnoncontact (keep= id p_amtthisyear rename=(p_amtthisyear=AmtNoContact));
 set results.nocontact_rd2;
 %include '/home/u58717790/Results/regression_2_amt.sas';
 run;
-
-
 
 
 
@@ -91,6 +103,9 @@ DATA results.rd2_output_amt;
    MERGE results.amtcontact results.amtnoncontact ;
    BY ID;
 run; 
+
+
+* Please dont forget to change 'u58717790' by your own user Number;
 
 proc export data=results.rd2_output_amt
 outfile="/home/u58717790/Results/Round2 Output amt.csv" dbms=csv
