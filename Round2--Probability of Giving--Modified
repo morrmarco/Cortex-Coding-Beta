@@ -52,7 +52,7 @@ model gaveThisYear(EVENT='1')=Age Salary Seniority GaveLastYear contact ;
 score data=results.train_rd2_prob fitstat outroc=T_roc;
 score data=results.test_rd2_prob fitstat outroc=V_roc;
 ROC;
-code file='/home/u58717790/Results/regression_2_prob.sas';
+code file='/home/u58717790/results/regression_2_prob.sas';
  run;
 
 
@@ -65,7 +65,7 @@ model GaveThisYear (EVENT='1') = GaveLastYear Seniority contact Age Salary ;
 partition roleVar=Selected(train='1' validate='0');
 grow gini;
 prune costcomplexity;
-code file='/home/u58717790/Results/decisiontree_2_prob.sas';
+code file='/home/u58717790/results/decisiontree_2_prob.sas';
 quit;
 
 
@@ -91,7 +91,7 @@ run;
 
 data results.predcontact (keep= id p_gavethisyear rename=(p_gavethisyear=PContact));
 set results.contact_rd2;
-%include '/home/u58717790/Results/regression_2_prob.sas';
+%include '/home/u58717790/results/regression_2_prob.sas';
 run;
 
 
@@ -114,7 +114,7 @@ run;
 
 data results.prednoncontact (keep= id p_gavethisyear rename=(p_gavethisyear=PNoContact));
 set results.nocontact_rd2;
-%include '/home/u58717790/Results/regression_2_prob.sas';
+%include '/home/u58717790/results/regression_2_prob.sas';
 run;
 
 
@@ -127,6 +127,6 @@ run;
 
 *Export data;
 proc export data=results.rd2_output_prob
-outfile="/home/u58717790/Results/Round2 Output prob.xlsx" dbms=xlsx
+outfile="/home/u58717790/results/Round2 Output prob.xlsx" dbms=xlsx
 replace;
 run;
