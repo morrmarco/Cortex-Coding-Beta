@@ -8,7 +8,7 @@
 *****************************************************************************************;
 
 libname cortex '/home/u58717790/my_shared_file_links/u39842936/Cortex Data Sets';
-libname results '/home/u58717790/Results';
+libname results '/home/u58717790/results';
 
 
 * Merge datasets 'hist' and 'target_rd2'. Also, you need to filter the data
