@@ -47,10 +47,10 @@ run;
 
 ******************* Logistic regression model *********************;
 ods graphics on;
-proc logistic data=train_rd2_prob;
+proc logistic data=results.train_rd2_prob;
 model gaveThisYear(EVENT='1')=Age Salary Seniority GaveLastYear contact ;
-score data=train_rd2_prob fitstat outroc=T_roc;
-score data=test_rd2_prob fitstat outroc=V_roc;
+score data=results.train_rd2_prob fitstat outroc=T_roc;
+score data=results.test_rd2_prob fitstat outroc=V_roc;
 ROC;
 code file='/home/u58717790/Results/regression_2_prob.sas';
  run;
