@@ -89,7 +89,7 @@ if not cmiss(of _numeric_);
 run;
 
 
-data results.predcontact (keep= id p_gavethisyear rename=(p_gavethisyear=PContact));
+data results.predcontact (keep= id p_gavethisyear1 rename=(p_gavethisyear1=PContact));
 set results.contact_rd2;
 %include '/home/u58717790/results/regression_2_prob.sas';
 run;
@@ -112,7 +112,7 @@ if not cmiss(of _numeric_);
 run;
 
 
-data results.prednoncontact (keep= id p_gavethisyear rename=(p_gavethisyear=PNoContact));
+data results.prednoncontact (keep= id p_gavethisyear1 rename=(p_gavethisyear1=PNoContact));
 set results.nocontact_rd2;
 %include '/home/u58717790/results/regression_2_prob.sas';
 run;
