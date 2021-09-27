@@ -27,6 +27,7 @@ run;
 ============================================================================;
 * You should come up with your own strategy to handle missing values;
 
+* In this case, we are deleting all missing values;
 data results.model_rd1;
 set model_rd1;
 if not cmiss(of _numeric_);
@@ -55,7 +56,7 @@ run;
 
 ods graphics off;
 proc glmselect data=results.train_rd1 testdata=results.test_rd1;
-model AmtThisYear=Age Salary Seniority GaveLastYear;
+model AmtThisYear = Age Salary Seniority GaveLastYear;
 title 'Regression of donation this year '
 'Predictors';
 code file='/home/u58717790/results/regression_1.sas';
@@ -66,8 +67,8 @@ run;
 
 proc arboretum data= results.train_rd1;
 target AmtThisYear / level=interval;
-input Age Salary / level=interval;
-input GaveLastYear Seniority/level=nominal;
+input Age Salary Seniority/ level=interval;
+input GaveLastYear /level=nominal;
 score data=results.test_rd1 role=valid OUT=_NULL_ OUTFIT=results.DT_stat_rd1;
 code file='/home/u58717790/results/decisiontree_1.sas' ;
 quit;
