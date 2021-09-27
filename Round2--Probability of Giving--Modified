@@ -70,8 +70,8 @@ quit;
 
 
 
-* Prepare and score new data based on your champion model for members who where contacted
-===============================================================================;
+* Prepare and score new data based on your champion model for members who were contacted
+=========================================================================================;
 
 * Merge datasets 'score' and 'score_rd2_contact;
 DATA contact_rd2;
@@ -95,8 +95,8 @@ set results.contact_rd2;
 run;
 
 
-* Prepare and score new data based on your champion model for members who where not contacted
-=============================================================================================;
+* Prepare and score new data based on your champion model for members who were not contacted
+==============================================================================================;
 
 /*Merge datasets 'score' and 'score_rd2_nocontact*/
 
